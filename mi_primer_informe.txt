@@ -1,0 +1,183 @@
+%La Molina National Agrarian University 
+%Report 
+%Escribimos el tipo de documento
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc} % Con este paquete se establece el idioma español
+\usepackage[spanish,es-tabla]{babel} % Proporciona flexibilidad en cuanto a uso de caracteres
+\usepackage[T1]{fontenc}
+\setlength{\parindent}{1.27cm} % Modifica la sangría
+\setlength{\parskip}{12pt} % Modificar la distancia entre párrafos
+\usepackage[a4paper,margin=1in]{geometry} % Marco del documento según la norma APA
+\usepackage{changepage}
+\usepackage[usenames,dvipsnames,svgnames,table,xcdraw]{xcolor}
+\usepackage{colortbl}
+\usepackage{subcaption}	
+\usepackage{makeidx}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{float}
+\usepackage{url}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage[refpages]{gloss}
+\usepackage{amsmath} % Para fórmulas matemáticas
+\usepackage{amsfonts} % Para fórmulas matemáticas
+\usepackage{amssymb} % Para fórmulas matemáticas
+\usepackage{caption} % Paquetes para captions
+\usepackage{fancyhdr} % Encabezado y pie de página
+\usepackage{setspace} % Paquete para el interlineado
+\usepackage[natbibapa]{apacite} % Paquete para citar sin problema con apacite
+\usepackage[hidelinks]{hyperref} % Paquete para hipervínculos
+\usepackage{graphicx} % Para insertar imágenes
+% \graphicspath{ {images/} }
+%\usepackage{wasysym}
+\usepackage{fourier} % Tipo de letra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Paquetes para poder insertar páginas de pdf al documento
+\usepackage{pdfpages}
+\usepackage{wallpaper}
+\usepackage{pdflscape}
+%Para insertar un pdf como fondo :D
+\usepackage[pages=all]{background}
+\backgroundsetup{scale=1,color=black,opacity=0.2,angle=0,contents={
+\includegraphics[width=\paperwidth,height=\paperheight]{Portada.pdf}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesection}{\Roman{section}}
+\AtBeginDocument{
+%\renewcommand{\contentsname}{\textcolor{blue}{Índice}}
+\renewcommand{\listtablename}{Índice de tablas}
+ \renewcommand{\listfigurename}{Índice de figure}
+} 
+
+%Color azul para los links de páginas web
+\hypersetup{urlcolor=blue}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+%\fancyhf[R]{1}
+\setlength\headheight{14.5pt}
+\fancyhead[L]{\textit{UNIVERSIDAD NACIONAL AGRARIA LA MOLINA}}
+\fancyhead[R]{\textit{2020-II}}
+\fancyfoot[L]{\textit{Profesor}}
+%\renewcommand{\headrulewidth}{0pt}
+%Esto establece el grosor de la línea del encabezado en 2 puntos.
+%\renewcommand{\footrulewidth}{1pt}
+%Establece el grosor de la línea del pie de página en 1 pt.
+
+\doublespacing
+\pagestyle{fancy}
+\title{Plantilla Oficial}
+\author{Ruth Jahaira Sota Barrueta}
+\date{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+\centering
+\begin{large}
+\textit{Año del Bicentenario del Perú: 200 años de Independencia}\\
+\end{large}
+\vspace{0.5cm}%Espacios verticales
+%Tamaño de las letras predeterminadas
+{\LARGE \textbf{UNIVERSIDAD NACIONAL AGRARIA LA MOLINA}}\\[0.5cm]
+{\Large \textbf{FACULTAD DE INGENIERÍA AGRÍCOLA}}\\[0.5cm]
+{\large DEPARTAMENTO ACADÉMICO DE RECURSOS HÍDRICOS}\\[0.5cm]
+\begin{figure}[htb]
+\centering
+\includegraphics[width=4.3cm,height=4.8cm]{Escudo_UNALM.pdf}
+\end{figure}
+{\Large \textbf{``MI PRIMER INFORME XD''}}\\
+\centering
+\large{\textbf{Integrantes:}}\\
+
+\begin{tabular}{lc}
+\centering
+Nombre 1 & Código 1  \\
+Nombre 2 & Código 2  \\
+Nombre 3 & Código 3 \\
+Nombre 4 & Código 4  \\
+\end{tabular}
+
+\large{\textbf{Curso:}}\\
+XXXXXX\\
+\large{\textbf{Profesor:}}\\
+XXXXXX\
+%sE VA HASTA ABAJO
+\vfill
+\centering
+{\large \textbf{La Molina, \today}}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%pARA PASAR A LA SIGUIENTE HOJA 
+\newpage
+
+\pagestyle{fancy}
+\begin{center}
+%Indices de capitulos, figuras y tablas
+\tableofcontents
+\listoffigures
+\listoftables
+\end{center}
+\newpage
+%Espaciado sencillo
+\singlespacing
+\section{INTRODUCCIÓN}
+El presente trabajo se enfoca en encontrar ...\\
+Tambien para esto...\\
+Y asi con ayuda de los slashs vas separando las oraciones, parrafos de tu texto.\\
+\section{OBJETIVOS}
+%Para esto se puede usar el \begin{itemize}
+\begin{itemize}
+    \item Obj1
+    \item Obj2
+    
+\end{itemize}
+\section{METODOLOGÍA}
+sE VAN AGREGANDO LAS SUBSECCIONES
+\subsection{pASO 1}
+\subsection{pASO 2}
+\subsection{pASO 3}
+\subsection*{HOLA}
+\section{TABLAS}
+\begin{table}[H]
+  \centering
+  \caption{Clases de xxxx $(gr/cm^3)$}
+    \begin{tabular}{@{}lc@{}}
+    \hline
+    \multicolumn{1}{c}{\textbf{Clases}} & \textbf{algo($gr/cm^3$)} \\
+    \hline
+    Arena (Sands) & 1.70-180 \\
+    Arena gruesa (Coarse sand) & 1.60-1.70 \\
+    Arena y arena fina (Sand and Fine Sand) & 1.55-1.65 \\
+    Arena muy fina (Very fine sand) &  \\
+    Arena franca (Loamy sands) & 1.60-1.70 \\
+    Arena franca gruesa (Loamy coarse sand) & 1.55-1.65 \\
+    Arena franca, Arena franca fina (Loamy sand, Loamy fine sand) & 1.55-1.60 \\
+    Arena franca muy fina (Loamy very fine sand) &  \\
+   
+    \hline
+    \end{tabular}\\[0.1cm]
+    % \caption{Clases texturales del suelo}
+    \small{\textbf{Fuente:} Google :v}
+  \label{tab:1}
+\end{table}
+\section{FIGURAS}
+El sistema de Munsell consiste en tres dimensiones basadas en la respuesta humana al color: Tono, Saturación y Valor \citep{Jaime}. El sistema no involucra ningún tipo de matemáticas y es tan sencillo como comprender las tres dimensiones de un objeto sólido. Este objeto es el Sólido de Munsell, una esfera que tiene tres dimensiones. El sistema permite evaluar los colores de un objeto sólo con nuestra vista, asignándole al color que pretendemos clasificar un lugar en sus tres dimensiones.
+
+% \begin{itemize}
+%     \item Tono (Matriz)
+% \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Escudo_UNALM.pdf}
+    \caption{Colores principales y Secundarios (Musell)}
+    \label{fig:colo1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.21]{Escudo_UNALM.pdf}
+    \caption{Colores principales y Secundarios (Musell)}
+    \label{fig:colo1}
+\end{figure}
+%Si no quiero que aparezca en el índice le agrego un * a la sección o subsección 
+
+\end{document}
